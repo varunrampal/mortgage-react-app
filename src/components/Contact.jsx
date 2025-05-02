@@ -24,6 +24,14 @@ const Contact = () => {
 
   return (
     <>
+    <div class="container">
+
+    <div class="session-title row">
+                <h2>Contact Me</h2>
+                <p>I can offer you several choices to help find you the mortgage that best matches your needs.</p>
+                <div class="heading-line"></div>
+            </div>
+    </div>
      <div id="contact" style={{width:'100vw', height: '100vh', display:'flex'}}>
      <form class="formContainer" ref={form} onSubmit={sendEmail}>
      <div class="formElement">
