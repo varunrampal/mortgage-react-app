@@ -1,9 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef,useState } from 'react';
 import emailjs from '@emailjs/browser';
+import ReactJsAlert from "reactjs-alert";
 
 const Contact = () => {
     const form = useRef();
-
+    const [status, setStatus] = useState(false);
+    const [type, setType] = useState("success");
+    const [title, setTitle] = useState("Thank you for your inquiry. I will get back to you as soon as possible.");
     const sendEmail = (e) => {
       e.preventDefault();
   
@@ -14,6 +17,10 @@ const Contact = () => {
         .then(
           () => {
             console.log('SUCCESS!');
+
+          setStatus(true);
+          setType("success");
+          setTitle("Thank you for your inquiry. I will get back to you as soon as possible.");
           },
           (error) => {
             console.log('FAILED...', error.text);
@@ -49,6 +56,12 @@ const Contact = () => {
       
        <input type="submit" value="Send" className='formButton'/>
       </form>
+      <ReactJsAlert
+        status={status}
+        type={type}
+        title={title}
+        Close={() => setStatus(false)}
+      />
      </div>
 
     </>

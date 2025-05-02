@@ -10,7 +10,7 @@ const Footer = () => {
                 <span><a href="#">HOME</a></span>
                 <span><a href="#about_us">ABOUT ME</a></span>
                 <span><a href="#services">SERVICES</a></span>
-                <span><a href="#testimonial">TESTIMONIAL</a></span>
+                <span><a href="#contact">Contact Me</a></span>
 
             </p>
             <a href="#">Copyright © 2025 | All right reserved.</a>
