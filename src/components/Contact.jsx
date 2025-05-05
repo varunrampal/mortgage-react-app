@@ -9,7 +9,8 @@ const Contact = () => {
     const [title, setTitle] = useState("Thank you for your inquiry. I will get back to you as soon as possible.");
     const sendEmail = (e) => {
       e.preventDefault();
-  
+     
+     
       emailjs
         .sendForm('service_9wwh682', 'template_btoua8k', form.current, {
           publicKey: 'LjissUB9pujYt6oa7',
@@ -21,6 +22,7 @@ const Contact = () => {
           setStatus(true);
           setType("success");
           setTitle("Thank you for your inquiry. I will get back to you as soon as possible.");
+  
           },
           (error) => {
             console.log('FAILED...', error.text);
@@ -43,15 +45,19 @@ const Contact = () => {
      <form class="formContainer" ref={form} onSubmit={sendEmail}>
      <div class="formElement">
      <label>Name</label>
-     <input type="text" name="name" />
+     <input type="text" name="name" placeholder="Enter your full name"/>
      </div>
      <div class="formElement">
      <label>Email</label>
-     <input type="email" name="email" />
+     <input type="email" name="email" placeholder="Enter your email address"/>
+     </div>
+     <div class="formElement">
+     <label>Phone</label>
+     <input type="tel" name="phone" placeholder="+2348123457"/>
      </div>
      <div class="formElement">
      <label>Message</label>
-     <textarea name="message" rows="8" cols="30" />  
+     <textarea name="message" rows="4" cols="60" />  
      </div>
       
        <input type="submit" value="Send" className='formButton'/>
