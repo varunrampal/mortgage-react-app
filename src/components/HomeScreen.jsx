@@ -12,7 +12,7 @@ const HomeScreen = () => {
                            <img class="logo-wt" src={logoMainTransparent} alt=""/>
                            <img class="logo-gry" src={logoMainTransparent} alt=""/>
 
-                           <a data-toggle="collapse" data-target="#menu" href="#menu"><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                           {/* <a data-toggle="collapse" data-target="#menu" href="#menu"><i class="fas d-block d-md-none small-menu fa-bars"></i></a> */}
                        </div>
                        <div id="menu" class="col-md-9 d-none d-md-block">
                            <ul>
