@@ -5,6 +5,8 @@ import Services from './components/Services.jsx'
 import Footer from './components/Footer.jsx'
 import Contact from './components/Contact.jsx'
 import ChatwootWidget from './components/Chatwoot.jsx';
+import Whatsapp from './components/Whatsapp.jsx';
+
 // import './App.css'
 
 function App() {
@@ -12,7 +14,7 @@ function App() {
 
   return (
     
-   <><HomeScreen /><AboutUs /><Services/><Contact/><Footer/><ChatwootWidget></ChatwootWidget></>
+   <><HomeScreen /><AboutUs /><Services/><Contact/><Footer/><Whatsapp/></>
    
   )
 }
