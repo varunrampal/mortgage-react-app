@@ -80,15 +80,20 @@ p {
   padding: 0px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
   color: #545454; }
 
 strong {
-  font-family: "Open Sans", sans-serif; }
+  /* font-family: "Open Sans", sans-serif;  */
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
+
+}
 
 body {
   background-color: #f1f1f145 !important;
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "PT Sans", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -102,7 +107,8 @@ body {
   .session-title h2 {
     width: 100%;
     text-align: center;
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
     font-weight: 600; }
   .session-title p {
     text-align: center;
@@ -190,17 +196,17 @@ body {
     box-shadow: none !important; }
 
 .btn-primary {
-  background-color: #fe9c2c;
-  border-color: #fe9c2c; }
+  background-color: #0091e0;
+  border-color: #0091e0; }
   .btn-primary:hover {
-    background-color: #fe9c2c !important;
-    border-color: #fe9c2c !important; }
+    background-color: #0091e0 !important;
+    border-color: #0091e0 !important; }
   .btn-primary:active {
-    background-color: #fe9c2c !important;
-    border-color: #fe9c2c !important; }
+    background-color: #0091e0 !important;
+    border-color: #0091e0 !important; }
   .btn-primary:focus {
-    background-color: #fe9c2c !important;
-    border-color: #fe9c2c !important;
+    background-color: #0091e0!important;
+    border-color: #0091e0 !important;
     box-shadow: none !important; }
 
 .btn {
@@ -245,7 +251,7 @@ html {
   height: 8px;
   width: 8px;
   border-radius: 50%;
-  border: 1px solid #fe9c2c;
+  border: 1px solid #0091e0;
   margin: 0 auto;
   position: relative; }
   .heading-line::after {
@@ -358,7 +364,7 @@ html {
         font-weight: 700;
         font-size: 1.5rem; }
         .home-screen .home-detail .homexp span a {
-          color: #fe9c2c; }
+          color: #0091e0; }
       .home-screen .home-detail .homexp p {
         margin-top: 20px;
         font-weight: 600;
@@ -455,7 +461,7 @@ html {
       .skills .skii-div ul li label {
         margin-bottom: 15px; }
       .skills .skii-div ul li .bg-warning {
-        background-color: #fe9c2c !important; }
+        background-color: #0091e0 !important; }
 .skills .tech-skill {
   background-color: #fff; }
 .skills .pro-skill {
@@ -481,7 +487,7 @@ html {
       line-height: 80px;
       text-align: center;
       font-size: 46px;
-      background-color: #fe9c2c;
+      background-color: #0091e0;
       color: #fff;
       border-radius: 25px;
       border-bottom-right-radius: 0;
@@ -497,10 +503,10 @@ html {
       font-size: .95rem;
       margin-top: 15px; }
     .services .services-row .seric-div .service-card:hover {
-      background-color: #fe9c2c; }
+      background-color: #0091e0; }
       .services .services-row .seric-div .service-card:hover i {
         background-color: #FFF;
-        color: #fe9c2c; }
+        color: #0091e0; }
       .services .services-row .seric-div .service-card:hover h4 {
         color: #fff; }
       .services .services-row .seric-div .service-card:hover p {
@@ -535,29 +541,29 @@ html {
   width: 7.5%;
   left: 46.5%;
   height: 45px;
-  border-bottom: 1px solid #fe9c2c; }
+  border-bottom: 1px solid #0091e0; }
 
 .filter-button {
   font-size: 15px;
-  border: 1px solid #fe9c2c;
+  border: 1px solid #0091e0;
   border-radius: 2px;
   text-align: center;
   color: #FFF;
   margin-bottom: 30px;
   padding: 5px 20px;
   margin-right: 5px;
-  background-color: #fe9c2c !important; }
+  background-color: #0091e0 !important; }
 
 .filter-button:hover {
   font-size: 18px;
-  border: 1px solid #fe9c2c;
+  border: 1px solid #0091e0;
   text-align: center;
-  color: #fe9c2c;
+  color: #0091e0;
   background-color: #FFF !important;
   padding: 5px 20px; }
 
 .btn-default:active .filter-button:active {
-  background-color: #fe9c2c;
+  background-color: #0091e0;
   color: white; }
 
 .port-image {
@@ -679,19 +685,19 @@ html {
 
 #generic_price_table .generic_content .generic_feature_list ul li:hover {
   background-color: #E4E4E4;
-  border-left: 5px solid #fe9c2c; }
+  border-left: 5px solid #0091e0; }
 
 #generic_price_table .generic_content .generic_price_btn a {
-  border: 1px solid #fe9c2c;
-  color: #fe9c2c; }
+  border: 1px solid #0091e0;
+  color: #0091e0; }
 
 #generic_price_table .generic_content.active .generic_head_price .generic_head_content .head_bg,
 #generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head_bg {
-  border-color: #fe9c2c; }
+  border-color: #0091e0; }
 
 #generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head span,
 #generic_price_table .generic_content.active .generic_head_price .generic_head_content .head span {
-  color: #fe9c2c; }
+  color: #0091e0; }
 
 #generic_price_table {
   font-family: 'Raleway', sans-serif; }
