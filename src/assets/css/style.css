@@ -1095,3 +1095,26 @@ html {
     border-right: 0px; } }
 
 /*# sourceMappingURL=style.css.map */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 28px;
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+}
+
