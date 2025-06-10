@@ -1002,9 +1002,9 @@ html {
 
 /* =================== Contact US Starts Here =================== */
 .cop-ck {
-  padding: 20px;
-  padding-left: 40px;
-  padding-top: 40px;
+  padding: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
   background-color: #ffffffbd; }
   .cop-ck label {
     font-size: .9rem; }
@@ -1017,8 +1017,10 @@ html {
       margin: auto;
       display: flex;
       flex-direction: column;
+      max-width: 720px;
+      width: 90%;
       text-align: left;
-      border: 2px solid black;
+      border: 1px solid black;
       box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
       border-radius: 20px;
       padding: 30px;
@@ -1031,6 +1033,12 @@ html {
       gap: 5px;
       margin-bottom: 10px;
   }
+  .formElement input:focus,
+.formElement textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
   
   .formElement input, textarea{
       padding: 8px;
@@ -1040,14 +1048,17 @@ html {
   }
   
   .formButton {
-      width: 100px;
-      padding: 10px;
-      margin-left: auto;
-      border-radius: 10px;
-      font-weight: 600;
-      border: 2px solid black;
-      box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
-      transition: all 0.2s ease-in;
+     width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: 2px solid black;
+    background-color: #007bff;
+color: white;
+border-color: #0056b3;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in;
+    margin-left: 0; /* Remove auto alignment */
   }
   
   .formButton:hover {
@@ -1055,7 +1066,12 @@ html {
       box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
       transform: translateX(-5px) translateY(-5px);
   }
-
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 20px;
+    max-width: 90%;
+  }
+}
 /* =================== Footer Starts Here =================== */
 .footer {
   padding: 50px;
@@ -1117,4 +1133,91 @@ html {
 .whatsapp-float:hover {
   background-color: #1ebe5d;
 }
+.floating-box {
+  position: fixed;
+  bottom: 20px;
+  right: -300px; /* Hidden off-screen initially */
+  background-color: #25d366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 999;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: right 0.5s ease;
+}
 
+.floating-box.show {
+  right: 20px; /* Slide into view */
+}
+.chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0091e0;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.chat-box {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.chat-box.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.chat-header {
+  background: #0091e0;
+  color: white;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  height: 40px; /* Lower height */
+}
+.chat-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.chat-header button:hover {
+  transform: scale(1.2);
+}
+.chat-body {
+  padding: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-size: 14px;
+}
