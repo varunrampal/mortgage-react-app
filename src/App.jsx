@@ -17,7 +17,7 @@ function App() {
 
   return (
     
-   <><HomeScreen /><AboutUs /><Services/><MortgageCalculatorNew/><Contact/><Footer/><Whatsapp/></>
+   <><HomeScreen /><AboutUs /><Services/><MortgageCalculatorNew/><Contact/><Footer/><SendSms/></>
    
   )
 }

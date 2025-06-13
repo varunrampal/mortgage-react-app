@@ -6,7 +6,12 @@ import twilio from 'twilio';
 import dotenv from 'dotenv';
 dotenv.config();
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 3000;
+const corsOptions = {
+  origin: '*', // Allow all origins for development; restrict in production
+  methods: ['GET', 'POST'], // Allow only GET and POST methods
+ 
+};
 
 // Twilio credentials (use environment variables in production)
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
@@ -16,16 +21,13 @@ const twilioTOPhone = process.env.TWILIO_TO_PHONE_NUMBER;
 
 
 const client = twilio(accountSid, authToken);
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 app.post('/send-message', async (req, res) => {
    
   const { phone, message } = req.body;
-  console.log("Received SMS:", { phone, message });
-  console.log("Twilio Phone:", twilioPhone);
-  console.log("Account SID:", accountSid);
-  console.log("Auth Token:", authToken);
+
   try {
     await client.messages.create({
       body: message+' ( From: '+phone+' )',
