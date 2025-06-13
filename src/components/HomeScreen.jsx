@@ -20,6 +20,7 @@ const HomeScreen = () => {
                                <li><a href="#about_us">About Me</a></li>
                                <li><a href="#services">Services</a></li>
                                <li><a href="#contact">Contact Me</a></li>
+                                 <li><a href="#calculator">Mortgage Calculator</a></li>
                             
                            </ul>
                        </div>

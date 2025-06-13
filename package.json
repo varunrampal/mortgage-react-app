@@ -15,12 +15,14 @@
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "html2canvas": "^1.4.1",
     "jspdf": "^3.0.1",
     "jspdf-autotable": "^5.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.56.2",
     "reactjs-alert": "^2.5.2",
+    "recharts": "^2.15.3",
     "twilio": "^5.7.0"
   },
   "devDependencies": {

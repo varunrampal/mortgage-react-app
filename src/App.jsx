@@ -7,6 +7,7 @@ import Contact from './components/Contact.jsx'
 import ChatwootWidget from './components/Chatwoot.jsx';
 import Whatsapp from './components/Whatsapp.jsx';
 import MortgageCalculator from './components/MortgageCalculator.jsx'  
+import MortgageCalculatorNew from './components/MortgageCalculatorNew.jsx'
 import SendSms from './components/SendSms.jsx'
 
 // import './App.css'
@@ -16,7 +17,7 @@ function App() {
 
   return (
     
-   <><HomeScreen /><AboutUs /><Services/><MortgageCalculator/><Contact/><Footer/><Whatsapp/></>
+   <><HomeScreen /><AboutUs /><Services/><MortgageCalculatorNew/><Contact/><Footer/><SendSms/></>
    
   )
 }

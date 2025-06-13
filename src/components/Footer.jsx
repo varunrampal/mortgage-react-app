@@ -12,6 +12,7 @@ const Footer = () => {
                 <span><a href="#about_us">ABOUT ME</a></span>
                 <span><a href="#services">SERVICES</a></span>
                 <span><a href="#contact">CONTACT ME</a></span>
+                <span><a href="#calculator">MORTGAGE CALCULATOR</a></span>
 
             </p>
 
