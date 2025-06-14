@@ -17,7 +17,9 @@ const SendSms = () => {
         setStatus(true);
         return;
       }
-      const response = await axios.post('https://themortgages.net/send-message', { message, phone });
+
+      
+      const response = await axios.post('https://nodeserver-9fb1.onrender.com/send-message', { message, phone });
       setStatus('Message sent! SID: ' + response.data.sid);
       setPhone('');
       setMessage('');

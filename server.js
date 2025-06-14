@@ -19,10 +19,16 @@ const authToken = process.env.TWILIO_AUTH_TOKEN;
 const twilioPhone = process.env.TWILIO_PHONE_NUMBER;
 const twilioTOPhone = process.env.TWILIO_TO_PHONE_NUMBER;
 
+console.log('TWILIO_ACCOUNT_SID:', accountSid);
+console.log('TWILIO_AUTH_TOKEN:', authToken);
+console.log('TWILIO_PHONE_NUMBER:', twilioPhone);
+console.log('TWILIO_TO_PHONE_NUMBER:', twilioTOPhone);
 
 const client = twilio(accountSid, authToken);
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
+
+
 
 app.post('/send-message', async (req, res) => {
    
