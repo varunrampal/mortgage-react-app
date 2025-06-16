@@ -298,7 +298,7 @@ html {
   .home-screen .logo .logo-gry {
     display: none; }
   .home-screen .home-cover {
-    background-color: rgba(0, 0, 0, 0.85); }
+    background-color: #D3DBE8; }
   .home-screen .header {
     margin-top: 3px;
     position: absolute;
@@ -313,7 +313,7 @@ html {
         padding: 25px 16px;
         font-weight: 600; }
         .home-screen .header ul li a {
-          color: #FFF; }
+          color: #605f61; }
         @media screen and (max-width: 957px) {
           .home-screen .header ul li {
             padding: 25px 10px;
@@ -337,10 +337,11 @@ html {
     .home-screen .home-detail .hom-img {
       text-align: center; }
       .home-screen .home-detail .hom-img img {
-        width: 80%; }
+        width: 80%;
+      padding-top: 35px; }
     .home-screen .home-detail .homexp {
       color: #FFF;
-      padding-top: 120px; }
+      padding-top: 210px; }
       @media screen and (max-width: 949px) {
         .home-screen .home-detail .homexp {
           padding-top: 20px; }
@@ -353,9 +354,10 @@ html {
           text-align: center; } }
       .home-screen .home-detail .homexp h2 {
         color: #FFF;
-        font-size: 5rem;
+        font-size: 3rem;
         font-weight: 700;
         margin-bottom: 10px; }
+
       .home-screen .home-detail .homexp h5 {
         color: #FFF;
         font-weight: 600;
@@ -368,7 +370,8 @@ html {
       .home-screen .home-detail .homexp p {
         margin-top: 20px;
         font-weight: 600;
-        font-size: .95rem; }
+        font-size: .95rem; 
+      color:#0091e0}
   @media screen and (max-width: 767px) {
     .home-screen .socil-icon {
       float: right;
@@ -1053,9 +1056,9 @@ html {
     border-radius: 10px;
     font-weight: 600;
     border: 2px solid black;
-    background-color: #007bff;
-color: white;
-border-color: #0056b3;
+    background-color: #0091e0;
+    color: white;
+    border-color: rgba(0, 0, 0, 0.3);;
     box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease-in;
     margin-left: 0; /* Remove auto alignment */
