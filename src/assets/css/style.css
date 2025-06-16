@@ -428,7 +428,8 @@ html {
   .about-us .about-row .detail-col p {
     font-size: .94rem;
     line-height: 30px;
-    color: #1f1f1; }
+    color: #1f1f1; 
+  }
   .about-us .about-row .detail-col .info-list {
     margin-top: 30px; }
     .about-us .about-row .detail-col .info-list ul li {
