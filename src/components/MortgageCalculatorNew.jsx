@@ -237,7 +237,7 @@ useEffect(() => {
                         </div>
                         <div ref={chartRef}>  <AmortizationChart schedule={schedule} /></div>
 
-                        <button onClick={downloadPDF} style={{ marginTop: '60px', marginLeft: '10px' }}>
+                        <button onClick={downloadPDF} style={{ marginTop: '70px', marginLeft: '10px' }}>
                             Download as PDF
                         </button>
                                 </div>
