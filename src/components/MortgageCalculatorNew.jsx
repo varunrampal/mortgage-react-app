@@ -123,7 +123,7 @@ useEffect(() => {
         <>
             <div class="container">
                 <div class="session-title row">
-                    <h2>Mortgage Calculator</h2>
+                    <h2>Mortgage Payment Calculator</h2>
                     <p>Quickly See What Your Mortgage Payments Might Look Like</p>
                 </div>
                 <div class="heading-line"></div>

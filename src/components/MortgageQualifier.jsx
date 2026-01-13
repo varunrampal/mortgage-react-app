@@ -188,8 +188,8 @@ export default function MortgageQualifierCanadaStyled() {
 <>
       <div class="container">
                 <div class="session-title row">
-                    <h2>Mortgage Qualifier</h2>
-                    <p>Uses GDS/TDS ratios + Canada stress-test qualifying rate.</p>
+                    <h2>Mortgage Affordability Calculator</h2>
+                    <p>Looking to buy a home? Enter a few basic details about your finances and our Mortgage Affordability Calculator will show the maximum monthly housing cost you can afford — including mortgage payment, property taxes, heating costs and more.</p>
                 </div>
                 <div class="heading-line"></div>
 
