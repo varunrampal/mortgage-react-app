@@ -1225,3 +1225,24 @@ html {
   overflow-y: auto;
   font-size: 14px;
 }
+
+#menu ul{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;     /* no wrapping */
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu ul li,
+#menu ul li a{
+  white-space: nowrap;
+  font-size: 14px;   /* prevent text from breaking */
+}
+
+/* If it still doesn't fit, scroll horizontally instead of wrapping */
+#menu{
+  overflow-x: auto;
+}

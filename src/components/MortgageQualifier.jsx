@@ -124,6 +124,8 @@ export default function MortgageQualifierCanadaStyled() {
     const maxHousing = Math.min(maxHousingByGDS, maxHousingByTDS);
 
     const maxMortgagePayment = maxHousing - (tax + heat + condo);
+   
+
     if (maxMortgagePayment <= 0) {
       return {
         ok: false,
@@ -151,7 +153,9 @@ export default function MortgageQualifierCanadaStyled() {
     const gds = housingCosts / incMonthly;
     const tds = (housingCosts + debts) / incMonthly;
 
-    return {
+     const realMortgagePmt = monthlyPayment(maxMortgage, contract, amort);
+
+     return {
       ok: true,
       qRate,
       incMonthly,
@@ -161,6 +165,7 @@ export default function MortgageQualifierCanadaStyled() {
       maxMortgage,
       maxHomePrice,
       mortgagePmt,
+       realMortgagePmt,
       tax,
       heat,
       condo,
@@ -183,7 +188,9 @@ export default function MortgageQualifierCanadaStyled() {
     gdsMax,
     tdsMax,
   ]);
-
+    const closingRate = 0.03;
+const estClosingCosts = results.maxHomePrice * closingRate;
+const cashNeededAtClose = results.down + estClosingCosts; 
   return (
 <>
       <div class="container">
@@ -292,7 +299,7 @@ export default function MortgageQualifierCanadaStyled() {
               />
             </div>
 
-            <div className="form-group">
+            {/* <div className="form-group">
               <label>GDS max (default 0.39)</label>
               <input
                 type="number"
@@ -314,40 +321,55 @@ export default function MortgageQualifierCanadaStyled() {
                 min="0"
                 max="1"
               />
-            </div>
+            </div> */}
           </div>
         )}
       </div>
-
       <div className="results">
-        <p>
-          Qualifying rate used: <b>{results.qRate?.toFixed?.(2)}%</b>
-        </p>
+       
 
         {!results.ok ? (
           <p style={{ color: "#b00020" }}>{results.reason}</p>
         ) : (
           <>
+           <p>
+            <b>How much can I comfortably spend on my home purchase?</b>
+        </p>
+            <p>
+              Max New home price (estimate): <b>{currency0(results.maxHomePrice)}</b>
+            </p>
             <p>
               Max mortgage (estimate): <b>{currency0(results.maxMortgage)}</b>
             </p>
-            <p>
-              Max home price (estimate): <b>{currency0(results.maxHomePrice)}</b>
-            </p>
-            <p>
+           
+            {/* <p>
               Mortgage payment (qualifying): <b>{currency0(results.mortgagePmt)}</b>
-            </p>
+            </p> */}
+
             <p>
+               Mortgage payment (Monthly): <b>{currency0(results.realMortgagePmt)}</b>
+          </p>
+            {/* <p>
               GDS: <b>{percent1(results.gds)}</b> (limit {(results.gdsLimit * 100).toFixed(0)}%)
             </p>
             <p>
               TDS: <b>{percent1(results.tds)}</b> (limit {(results.tdsLimit * 100).toFixed(0)}%)
+            </p> */}
+
+            <p>
+  Estimated closing costs (3%): <b>{currency0(estClosingCosts)}</b>
+</p>
+<p>
+  Cash needed at closing: <b>{currency0(cashNeededAtClose)}</b>
+</p>
+             <p>
+               Qualifying rate used: <b>{results.qRate?.toFixed?.(2)}%</b>
             </p>
           </>
         )}
       </div>
 
-      {results.ok && isAdvanced && (
+      {/* {results.ok && isAdvanced && (
         <div className="schedule-table">
           <h3>Monthly Housing Breakdown</h3>
           <StackedBar
@@ -357,7 +379,27 @@ export default function MortgageQualifierCanadaStyled() {
             condo={results.condo}
           />
         </div>
-      )}
+      )} */}
+
+      {/* {results.ok && isAdvanced && (
+  <div className="schedule-table">
+    <h3>Monthly Housing Breakdown (Real Payment)</h3>
+    <StackedBar
+      mortgage={results.realMortgagePmt}
+      taxes={results.tax}
+      heating={results.heat}
+      condo={results.condo}
+    />
+
+    <h3 style={{ marginTop: 18 }}>Monthly Housing Breakdown (Qualifying / Stress Test)</h3>
+    <StackedBar
+      mortgage={results.mortgagePmt}
+      taxes={results.tax}
+      heating={results.heat}
+      condo={results.condo}
+    />
+  </div>
+)} */}
     </div>
     </>
   );
